@@ -109,8 +109,8 @@ Key Skills Demonstrated
 
 - Splunk ingestion and field extraction
 
-ATT&CK-aligned detection logic
+- ATT&CK-aligned detection logic
 
-Sigma rule authoring and validation
+- Sigma rule authoring and validation
 
-Hands-on adversary simulation
+- Hands-on adversary simulation
