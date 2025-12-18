@@ -1,7 +1,6 @@
 # sysmon-splunk-lateral-movement-detections
 
 Sysmon + Splunk Lateral Movement Detection Lab
-Overview
 
 This project demonstrates end-to-end Windows attack detection using Sysmon telemetry, Splunk ingestion, and Sigma detection rules. Multiple attacker techniques were simulated and validated against live logs to confirm reliable detection coverage.
 
