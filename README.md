@@ -1,0 +1,1 @@
+# sysmon-splunk-lateral-movement-detections
