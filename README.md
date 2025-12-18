@@ -7,32 +7,35 @@ This project demonstrates end-to-end Windows attack detection using Sysmon telem
 
 Architecture
 
-Windows VM (attacker + victim simulation)
+1. Windows VM (attacker + victim simulation)
 
-Sysmon (custom XML configuration)
+2. Sysmon (custom XML configuration)
 
-Splunk Enterprise (local ingestion)
+3. Splunk Enterprise (local ingestion)
 
-Sigma rules for detection logic
+4. Sigma rules for detection logic
 
-Telemetry Collection (Sysmon)
+5. Telemetry Collection (Sysmon)
+
+---
 
 Sysmon was installed with a custom configuration to capture high-value security events:
 
-Process creation (Event ID 1)
+- Process creation (Event ID 1)
 
-Network connections (Event ID 3)
+- Network connections (Event ID 3)
 
-File creation (Event ID 11)
+- File creation (Event ID 11)
 
-Registry persistence (Event IDs 12–14)
+- Registry persistence (Event IDs 12–14)
 
-Process termination (Event ID 5)
+- Process termination (Event ID 5)
 
 
 ![Sysmon installed with custom XML](./2.png)
 ![Sysmon XML configuration](./3.png)
 
+---
 
 Splunk Ingestion & Parsing
 
@@ -45,8 +48,7 @@ Custom field extraction was applied to reliably parse Event IDs from XML logs.
 ![Splunk ingest confirmation](./10.png)
 ![Sysmon EventID distribution](./7.png)
 
-
-
+---
 
 Attack Simulation & Validation
 
@@ -84,25 +86,29 @@ Detected via Sysmon Event ID 11
 
 ![Suspicious file creation detected](./11.png)
 
+---
+
 Sigma Detection Rules
 
 Custom Sigma rules were authored to detect each technique and mapped to MITRE ATT&CK:
 
-exe_from_temp.yml → Execution
+- exe_from_temp.yml → Execution
 
-registry_run_persistence.yml → Persistence
+- registry_run_persistence.yml → Persistence
 
-local_admin_net_user.yml → Privilege escalation / persistence
+- local_admin_net_user.yml → Privilege escalation / persistence
 
 ![Custom Sigma detection rules](./18.png)
 
+---
+
 Key Skills Demonstrated
 
-Windows telemetry engineering
+- Windows telemetry engineering
 
-Sysmon configuration and tuning
+- Sysmon configuration and tuning
 
-Splunk ingestion and field extraction
+- Splunk ingestion and field extraction
 
 ATT&CK-aligned detection logic
 
